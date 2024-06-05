@@ -1,0 +1,19 @@
+[package]
+name = "discord_jukebox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+symphonia = { version = "0.5.2", features = ["aac", "mp3", "isomp4", "alac"] }
+songbird = { version = "0.4.1"}
+futures = "0.3.30"
+tracing = "0.1"
+tracing-subscriber = "0.3.18"
+tokio = { version = "1.31.0", features = ["rt-multi-thread", "signal"]}
+rdkafka = "0.36.2"
+simd-json = { version = "0.13.10", features = [
+    "serde_impl",
+    "swar-number-parsing",
+] }
+serde = { default-features = false, features = ["derive"], version = "1" }
+serde_json = { default-features = false, features = ["std"], version = "1" }
